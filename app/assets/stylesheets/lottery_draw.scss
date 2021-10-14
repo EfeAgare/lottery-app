@@ -1,3 +1,32 @@
 // Place all the styles related to the LotteryDraw controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.button_to {
+  margin-top: 20px;
+}
+
+.waves-button-input{
+  color: #fff;
+  cursor: pointer;
+}
+
+.valign-wrapper {
+  min-height: 300px;
+  p {
+    padding-left: 2px;
+  }
+}
+
+.clock-countdown {
+  display: flex;
+
+  .minutes {
+    padding-right: 3px;
+  }
+
+  .seconds {
+    padding: 0px 3px;
+  }
+}
