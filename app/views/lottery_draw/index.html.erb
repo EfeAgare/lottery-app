@@ -1,0 +1,40 @@
+<div class="row s12">
+  <div class="row s12">Next Draw </div>
+  <div class="col s12">
+    <div class="valign-wrapper card col s12 m12">
+      <div class="col s5">
+        <div class="">
+          <div class="">
+            <div class=" center lottery_number">
+              <%= render partial: "lottery_number", collection: @lottery_number %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col s2">
+        <div class="center">
+          <%= link_to "Retry", root_path, remote: true, class: "btn retry waves-effect grey darken-4 center-align" %> 
+          <%= button_to "Add to slip", user_lottery_path, remote: true, class: "btn add-to-slip
+          waves-effect grey darken-4 center-align #{@user_lottery&.in_progress? ? 'disabled' : ''}", params: {lottery_number: @lottery_number.join(","), draw_status: "in_progress" }, :disabled => @user_lottery&.in_progress? %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row s12">
+  <div class="row s12">Last Draw </div>
+  <div class="col s12">
+    <div class="valign-wrapper card col s12 m12">
+      <div class="col s3"><p>Last draw date</p><p>Turnover</p></div>
+      <div class="col s2"><p><%= last_draw_date %><p>$8,000,000</p></div>
+      <div class="col s7">
+        <span class="center card-title">Draw Results</span>
+        <div class="center horizontal">
+          <%= render partial: "last_draw", collection: @last_draw&.split(",") %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Page Content goes here -->
