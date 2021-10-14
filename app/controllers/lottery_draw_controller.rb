@@ -4,7 +4,7 @@ class LotteryDrawController < ApplicationController
   def index
     @lottery_number = LotteryNumber::Generator.new.pick(6)
     @last_draw      = LotteryDraw.last_with_lottery_number
-
+  
     respond_to do |format|
       format.js
       format.html

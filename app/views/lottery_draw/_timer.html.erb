@@ -1,0 +1,15 @@
+<div id="clockdiv">
+  <div class='clock-countdown'>
+    <span class="minutes"></span>
+    <div class="smalltext"><%= t(".minutes") %></div>
+    <span class="seconds">  </span>
+    <div class="smalltext"> <%= t(".seconds") %> </div>
+  </div>
+</div>
+
+<script>
+  var timeInSeconds = <%= timer_count %>;
+  var currentTime = Date.parse(new Date());
+  var deadline = new Date(currentTime + timeInSeconds*1000);
+  initializeClock('clockdiv', deadline);
+</script>

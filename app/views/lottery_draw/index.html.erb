@@ -2,10 +2,12 @@
   <div class="row s12">Next Draw </div>
   <div class="col s12">
     <div class="valign-wrapper card col s12 m12">
+      <div class="col s3"><p>Draw date</p><p>Stop selling Time</p><p>Turnover</p></div>
+      <div class="col s4"><p><%= start_date %></p><p id="notifications-"><%= render partial: "timer" %></p><p>$8,000,000</p></div>
       <div class="col s5">
         <div class="">
           <div class="">
-            <div class="center lottery_number">
+            <div class=" center lottery_number">
               <%= render partial: "lottery_number", collection: @lottery_number %>
             </div>
           </div>
