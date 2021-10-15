@@ -3,7 +3,7 @@ class LotteryDrawController < ApplicationController
 
   def index
     @lottery_number = LotteryNumber::Generator.new.pick(6)
-    @last_draw      = LotteryDraw.last.lottery_number
+    @last_draw      = last_lottery_number
   
     respond_to do |format|
       format.js
@@ -17,5 +17,9 @@ class LotteryDrawController < ApplicationController
     return unless current_user
 
     @user_lottery = current_user.user_lotteries.last
+  end
+
+  def last_lottery_number
+    LotteryDraw.with_lottery_number.last&.lottery_number
   end
 end
