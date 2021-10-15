@@ -53,6 +53,8 @@ gem 'pg'
 gem "figaro"
 gem 'materialize-sass', '~> 1.0.0'
 gem 'material_icons' 
+gem 'sidekiq'
+gem 'sidekiq-cron'
 
 group :test do
   gem 'shoulda-matchers', '~> 5.0'

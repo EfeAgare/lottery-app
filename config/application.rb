@@ -29,6 +29,8 @@ module LotteryApp
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
     #
+    config.active_job.queue_adapter = :sidekiq
+    config.action_cable.url = "ws://localhost:3000/cable"
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 
