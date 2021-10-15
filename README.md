@@ -29,7 +29,7 @@
 
 
 ### How to run the app-server:
-   Ensure you have ruby installed then you can clone this repository in your local machine. Then run
+   Ensure you have ruby installed and have completed the steps above. Then run
    - rails s
 
 
