@@ -1,24 +1,32 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
 * Ruby version
+   - 3.0.0
 
 * System dependencies
+    - postgres
+    - redis
 
 * Configuration
 
+   - cp -v config/application-examle.yml  config/application.yml
+     then edit the username and password for postgresDB
+   - run => bundle
+
 * Database creation
+   - rails db:create
 
 * Database initialization
+   - rails db:migrate
 
 * How to run the test suite
+  - rspec
 
-* Services (job queues, cache servers, search engines, etc.)
+* Services: This app uses sidekiq, redis to run background jobs
+   the command to starts are
+  - redis-server
+  - sidekiq
 
-* Deployment instructions
 
-* ...
+
+
