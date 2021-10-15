@@ -7,11 +7,10 @@ class UserLottery < ApplicationRecord
     loss: 2
   }
 
-  enum: draw_status: {
+  enum draw_status: {
     inactive: 0,
     in_progress: 1,
     completed: 2
   }
 
-  
 end

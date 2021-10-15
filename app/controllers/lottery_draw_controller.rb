@@ -1,5 +1,5 @@
 class LotteryDrawController < ApplicationController
-  # before_action :has_lotteries
+  before_action :has_lotteries
 
   def index
     @lottery_number = LotteryNumber::Generator.new.pick(6)

@@ -18,6 +18,6 @@ module LotteryDrawHelper
   private
   
   def lottery_draw
-   LotteryDraw.last
+    LotteryDraw.last
   end
 end
