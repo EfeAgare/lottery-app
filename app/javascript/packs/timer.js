@@ -21,7 +21,8 @@ window.initializeClock= function(id, endtime) {
 			(t.minutes == 0 && t.seconds == 0) ||
 			(t.minutes == -1 && t.seconds == -1)
 		) {
-			return $(".clock-countdown").html(`<span>Draw stopped</span>`);
+			$(".clock-countdown").html(`<span>Draw stopped</span>`);
+			return $(".draw-start-notice").html(`<h3> Lottery countdown stops</h1>`);
 		}
 
 		minutesSpan.innerHTML = ("0" + t.minutes).slice(-2);
